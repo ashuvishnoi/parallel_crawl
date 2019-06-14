@@ -28,6 +28,6 @@ def parallel_crawl(urls):
 
             break
 
-    logger.info("Returned the crawlled data")
+    logger.info("Returned the crawled data")
 
     return crawlled_data

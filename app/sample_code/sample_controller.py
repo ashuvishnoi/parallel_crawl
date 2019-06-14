@@ -10,6 +10,7 @@ def sample_handler():
     try:
         if request.is_json:
             response = sample_service.sample_services(request.get_json())
+            logger.debug(f"response object: {response}")
             return jsonify(response)
         else:
             return jsonify(BAD_INPUT)
