@@ -10,7 +10,7 @@ def get_url_batches(urls):
     return batches
 
 def get_dict(crawlled_data):
-    return data_crawled=[{i: j.get_dict()} for obj in crawlled_data for i, j in obj.items()]
+    return [{i: j.get_dict()} for obj in crawlled_data for i, j in obj.items()]
 
 def parallel_crawl(urls):
     url_batches = get_url_batches(urls)
